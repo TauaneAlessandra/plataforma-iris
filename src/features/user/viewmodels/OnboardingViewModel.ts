@@ -1,4 +1,5 @@
 import { makeAutoObservable } from 'mobx';
+import { encryptionService } from '../../../core/security/EncryptionService';
 
 export class OnboardingViewModel {
   step: number = 1;
@@ -34,6 +35,10 @@ export class OnboardingViewModel {
     const randomNum = Math.floor(1000 + Math.random() * 9000);
     
     this.userName = `${randomAdj}${randomAnimal}${randomNum}`;
+    
+    // Initialize encryption service with the identity as master key (for study purposes)
+    await encryptionService.initialize(this.userName);
+    
     this.isGeneratingIdentity = false;
   }
 

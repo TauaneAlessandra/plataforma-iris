@@ -7,6 +7,7 @@ interface CardProps {
   padding?: 'none' | 'sm' | 'md' | 'lg';
   className?: string;
   onClick?: () => void;
+  isClickable?: boolean;
 }
 
 export const Card: React.FC<CardProps> = ({
@@ -14,11 +15,12 @@ export const Card: React.FC<CardProps> = ({
   variant = 'default',
   padding = 'md',
   className = '',
-  onClick
+  onClick,
+  isClickable = false
 }) => {
   return (
     <div 
-      className={`card card-${variant} card-p-${padding} ${onClick ? 'is-clickable' : ''} ${className}`}
+      className={`card card-${variant} card-p-${padding} ${(onClick || isClickable) ? 'is-clickable' : ''} ${className}`}
       onClick={onClick}
     >
       {children}
