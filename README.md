@@ -99,11 +99,6 @@ A interface foi projetada para ser **Clean, Acolhedora e Intuitiva**:
 
 Diferente de outras plataformas, a Íris adota o princípio de **Criptografia na Origem**. Isso significa que suas notas e conversas são cifradas no seu dispositivo antes mesmo de serem armazenadas. Você detém as chaves; você detém suas memórias.
 
----
-
-## 📄 Licença
-
-Este projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para detalhes.
 
 ---
 <p align="center">
