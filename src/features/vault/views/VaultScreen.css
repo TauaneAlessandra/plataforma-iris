@@ -1,0 +1,35 @@
+.vault-container {
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  padding-bottom: 4rem;
+}
+
+.vault-icon-wrapper {
+  background: var(--surface-color);
+  color: var(--primary-color);
+  border: 2px solid var(--border-color);
+  box-shadow: var(--shadow-soft);
+}
+
+.password-input-wrapper {
+  background: var(--bg-color);
+  border: 1px solid var(--border-color);
+  color: var(--text-primary);
+}
+
+.password-input-wrapper input {
+  color: var(--text-primary);
+}
+
+.security-notice {
+  color: var(--secondary-color);
+}
+
+.item-tag {
+  color: var(--primary-color);
+}
+
+.add-vault-item {
+  color: var(--text-muted);
+}

@@ -1,0 +1,71 @@
+.breathing-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  min-height: 80vh;
+}
+
+.breathing-header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.visualizer-container {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 5rem;
+}
+
+.breath-circle {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 60px -10px var(--primary-glow);
+  position: relative;
+}
+
+.breath-inner {
+  width: 80%;
+  height: 80%;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(4px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.status-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  text-align: center;
+  pointer-events: none;
+}
+
+.status-text {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: white;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.breathing-controls {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+/* Specific colors per state */
+.breath-circle.inhale { box-shadow: 0 0 80px -10px var(--primary-glow); }
+.breath-circle.hold { box-shadow: 0 0 80px -10px rgba(45, 212, 191, 0.3); }
+.breath-circle.exhale { box-shadow: 0 0 80px -10px rgba(251, 113, 133, 0.3); }
